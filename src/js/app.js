@@ -1,3 +1,6 @@
+// CSS
 require('../css/main.css');
-window.$ = require('jquery');
+
+// JavaScript
+window.jQuery = window.$ = require('jquery');
 require('./main.js');

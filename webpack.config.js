@@ -7,14 +7,22 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-   loaders: [
-     {
-       test: /\.css$/,
-       loaders: [
-         'style-loader',
-         'css-loader'
-       ]
-     }
-   ]
+    rules: [{
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
+      },{
+      	test: /\.scss$/,
+        use: [
+          { loader: "style-loader"},
+          { loader: "css-loader", options: { sourceMap: true }},
+          { loader: "sass-loader", options: { sourceMap: true }}
+        ]
+      },{
+        test: /\.(svg|gif|png|eot|woff|ttf)$/,
+        loaders: [
+          'url-loader'
+        ]
+      }
+    ]
+   }
  }
-}

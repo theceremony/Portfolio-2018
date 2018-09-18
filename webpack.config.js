@@ -1,7 +1,8 @@
 
 
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let LiveReloadPlugin =  require('webpack-livereload-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LiveReloadPlugin =  require('webpack-livereload-plugin');
+
 
 module.exports =  {
   entry: './src/js/app.js',
@@ -11,7 +12,13 @@ module.exports =  {
   },
   module: {
     rules: [{
-        use: ['style-loader', 'css-loader'],
+        test: /\.pug$/,
+        use: ['html-loader?attrs=false', 'pug-html-loader']
+      },{
+        use: [
+          { loader: "style-loader"},
+          { loader: "css-loader", options: { sourceMap: true }
+        ],
         test: /\.css$/
       },{
       	test: /\.scss$/,
@@ -29,7 +36,10 @@ module.exports =  {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.pug',
+    }),
     new LiveReloadPlugin({
       protocol:'http',
       appendScriptTag: true

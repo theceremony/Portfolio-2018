@@ -1,6 +1,9 @@
 // CSS
-require('../css/main.css');
+import('../css/main.css');
+import('onepage-scroll/onepage-scroll.css');
 
 // JavaScript
 window.jQuery = window.$ = require('jquery');
-require('./main.js');
+import('onepage-scroll/jquery.onepage-scroll.js');
+
+import('./main.js');

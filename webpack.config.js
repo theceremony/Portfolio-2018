@@ -1,6 +1,9 @@
 
 
-module.exports = {
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let LiveReloadPlugin =  require('webpack-livereload-plugin');
+
+module.exports =  {
   entry: './src/js/app.js',
   output: {
     path: __dirname + '/dist',
@@ -24,5 +27,12 @@ module.exports = {
         ]
       }
     ]
-   }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new LiveReloadPlugin({
+      protocol:'http',
+      appendScriptTag: true
+    })
+  ]
  }

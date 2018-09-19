@@ -16,4 +16,10 @@ $(function(){
      responsiveFallback: false,
      direction: "vertical"
   });
+
+  let landingBKGS = ['#f08860','#c1c627','#c627c6','#c6274c','#27c6be'];
+  let color = landingBKGS[Math.floor(Math.random() * landingBKGS.length)]
+  $('.about').css('background-color',color);
+  $('.info').css('color',color);
+
 });

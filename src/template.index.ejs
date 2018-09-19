@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jeramy Morrill - Creative Technologist -- Designer -- Illustrator</title>
+	<meta name="viewport" content="width=device-width">
+	<style>
+    body { display: none }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <section class="about">
+      <h1> Art Code & Design </h1>
+      <h2> Jeramy Morrill : Creative Technologist
+				- Creative Director
+				- Installation Artist
+			</h2>
+			<canvas></canvas>
+    </section>
+
+		<% htmlWebpackPlugin.options.data.forEach(function(item) { %>
+			<section class="portfolio">
+				<div class="background" style="background-image: url(./images/work/<%= item.mediaFolder %>/main.jpg);"></div>
+				<div class="info">
+				 	<h2><%= item.clientName %>: <%= item.projectName %></h2>
+				 	<h3><%= item.projectSubHead %></h3>
+					<!-- <h4><%= item.content.header.title %></h4>
+					<p><%= item.content.header.copy %></p>
+				</div>
+				<!-- <iframe
+					src="https://player.vimeo.com/video/<%= item.vimeoId %>"
+					width="640"
+					height="360"
+					frameborder="0"
+					webkitallowfullscreen
+					mozallowfullscreen
+					allowfullscreen>
+				</iframe> -->
+			</section>
+		<% }); %>
+  </div>
+
+</html>

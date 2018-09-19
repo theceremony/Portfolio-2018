@@ -6,4 +6,7 @@ import('onepage-scroll/onepage-scroll.css');
 window.jQuery = window.$ = require('jquery');
 import('onepage-scroll/jquery.onepage-scroll.js');
 
+// require('pixi.js');
+// console.log(PIXI);
+
 import('./main.js');

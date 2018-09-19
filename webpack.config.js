@@ -2,7 +2,7 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LiveReloadPlugin =  require('webpack-livereload-plugin');
-
+const json = require('./src/projects.json');
 
 module.exports =  {
   entry: './src/js/app.js',
@@ -11,13 +11,21 @@ module.exports =  {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{
+    rules: [
+      {
+        test: /\.ejs$/,
+        loader: "underscore-template-loader"
+      },
+      {
         test: /\.pug$/,
-        use: ['html-loader?attrs=false', 'pug-html-loader']
+        use: [
+          { loader: 'html-loader?attrs=false'},
+          { loader:'pug-html-loader' }
+          ]
       },{
         use: [
           { loader: "style-loader"},
-          { loader: "css-loader", options: { sourceMap: true }
+          { loader: "css-loader", options: { sourceMap: true }}
         ],
         test: /\.css$/
       },{
@@ -28,9 +36,12 @@ module.exports =  {
           { loader: "sass-loader", options: { sourceMap: true }}
         ]
       },{
-        test: /\.(svg|gif|png|eot|woff|ttf)$/,
-        loaders: [
-          'url-loader'
+        test: /\.(jpg|svg|gif|png)$/,
+        use:[
+          {
+            loader:'file-loader',
+            options: { name: 'images/[hash]-[name].[ext]'}
+          }
         ]
       }
     ]
@@ -38,7 +49,8 @@ module.exports =  {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.pug',
+      template: './src/template.index.ejs',
+      data: json,
     }),
     new LiveReloadPlugin({
       protocol:'http',

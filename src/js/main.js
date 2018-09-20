@@ -1,16 +1,14 @@
 $(function(){
-  function swapColors(index){
-    setTimeout(function(){
-      let landingBKGS = ['#f08860','#c1c627','#c627c6','#c6274c','#27c6be'];
-      let color = landingBKGS[Math.floor(Math.random() * landingBKGS.length)]
 
-      // $('.about').css('background-color',color);
-      console.log(index);
-      $($('section')[index]).css('background-color',color);
-      // let section = $('section');
+  let timer = null;
+  function show(index){
 
-      // $('.info').css('color',color);
-      if(index == 0) $('.cutout').css('border-top-color',color);
+    if(timer) clearTimeout(timer);
+
+    timer = setTimeout(function(){
+      $('section').removeClass('show');
+      let section = $($('section')[index])
+        section.addClass('show');
     },200)
   }
 
@@ -24,8 +22,7 @@ $(function(){
        // console.log('about to move');
      },
      afterMove: function(index) {
-       swapColors(index-1);
-
+       show(index-1);
      },
      loop: false,
      keyboard: true,
@@ -33,6 +30,18 @@ $(function(){
      direction: "vertical"
   });
 
-  swapColors(0);
+  show(0);
+  let landingBKGS = ['#f08860','#c1c627','#c627c6','#c6274c','#27c6be'];
+  let color = landingBKGS[Math.floor(Math.random() * landingBKGS.length)]
 
+  $('section').css('background-color',color);
+  $('.cutout').css('border-top-color',color);
+
+  $('iframe').mouseover(function(e){
+    $(e.currentTarget).addClass('hover');
+  })
+
+  $('iframe').mouseout(function(e){
+    $(e.currentTarget).removeClass('hover');
+  })
 });

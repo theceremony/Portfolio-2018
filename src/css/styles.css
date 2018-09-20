@@ -1,7 +1,7 @@
 body {
   margin: 1.5em;
   font-family: 'Quicksand', sans-serif;
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
 }
 
@@ -19,42 +19,54 @@ section{
   box-sizing: border-box;
   background-size: cover;
   background-blend-mode: exclusion;
+  transition: background-color 3s;
+  background-color: #f08860;
 }
 
 section.portfolio iframe{
   position: absolute;
-  top:0;
-  left:0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+
+  top: 60%;
+  left:50%;
+
+  width: 64.5vw;
+  height: 36vw;
+  background-color: #000;
+  z-index: 10;
+  border:1vw solid black;
+  box-shadow: 0.7vw 0.8vh rgba(255,255,255,.8);
+  transform: translate(-50%,-50%) rotate(-1deg);;
+}
+
+section.portfolio::after{
+  content: '';
+  width: 64.5vw;
+  height: 36vw;
+  border: 2vw solid white;
+  transform: translate(-50%,-50%) rotate(10deg);
+  position: absolute;
+  top: 60%;
+  left:50%;
+  z-index: 5;
 }
 
 section.portfolio .info{
   position: absolute;
   z-index: 100;
-  background-color:black;
+  background-color:rgba(0,0,0,1);
   padding: 2vw 2vw;
-  left: 0;
-  bottom:0;
+  left: 2vw;
+  top:6vw;
   /* transform: translate(-50%,0); */
   /* width: 100%; */
-  color:#000;
-  border-radius: 5px;
-  width:100%;
-  text-shadow: 0.15vw 0.15vh rgba(0,0,0,0.1);
+  color:#fff;
+  /* border-radius: 5px; */
+  width:30vw;
+  transform: rotate(-5deg);
+  box-shadow: 0.7vw 0.8vh rgba(255,255,255,.8);
+  box-sizing: border-box;
 }
 
-/* section.portfolio .info:before{
-    content:'';
-    position:absolute;
-    bottom:100%;
-    width:100%;
-    height:100%;
-    border-radius:100%;
-    box-shadow: 0px 300px 0px 300px #000;
-    z-index: 0
-} */
 
 section.portfolio .background{
   position: absolute;
@@ -66,29 +78,78 @@ section.portfolio .background{
   box-sizing: border-box;
   background-size: cover;
   background-blend-mode: exclusion;
-  opacity: .8;
+  opacity: .2;
+  background-position: center;
 }
 
 section.portfolio .info h1,h2,h3{
   font-family: 'Rajdhani', sans-serif;
   margin:0;
+  text-shadow: 0.15vw 0.15vh rgba(100,100,100,.8);
 }
 section.portfolio .info h2{
-  font-size: 1.8vw;
-  font-weight: 800;
+  font-size: 3.8vw;
+  /* font-weight: 800; */
+  line-height: 100%;
+  margin-bottom: 1vw;
+  /* font-family: 'Anton', sans-serif; */
+  text-transform: uppercase;
 }
 section.portfolio .info h3{
   font-style: italic;
 }
 
 section.portfolio .info p{
-  width: 30%;
+  /* width: 30%; */
 }
 
 .about{
   padding: 9vh;
   background-color: #f08860;
 }
+.about .footer{
+  display: block;
+  width:100%;
+  height: 5vh;
+  bottom:0;
+  left:0;
+  position: absolute;
+  background-color: rgba(0,0,0,.8);
+  z-index: 0;
+}
+.about .cutout{
+  width:0;
+  height:10vw;
+  position: absolute;
+  content: '';
+  display: block;
+  left: 50%;
+  top:0%;
+
+  border-left: 3vw solid transparent;
+  border-right: 3vw solid transparent;
+
+  border-top: 2vw solid #f08860;
+  transform: translate(-50%,0);
+
+  transition: border-top-color 3s;
+  box-sizing: border-box;
+}
+
+.about .icon{
+  position: absolute;
+  width:5vw;
+  height:10vw;
+  bottom: .5vw;
+  left:50%;
+  transform: translate(-50%,0);
+  background-image: url(/images/arrow-down-sign-to-navigate.svg);
+  background-size: 30% 30%;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+}
+
+
 .about h1{
   font-size: 20vw;
   text-transform: uppercase;
@@ -101,6 +162,9 @@ section.portfolio .info p{
   font-style:normal;
   text-shadow: 0.4vw 0.4vh rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.9);
+  z-index: 100;
+  position: relative;
+
 }
 .about h2{
   font-size: 1.68vw;
@@ -108,6 +172,9 @@ section.portfolio .info p{
   font-weight: 100;
   color: rgba(0,0,0,0.9);
   margin-top: 2vh;
+  z-index: 100;
+  position: relative;
+  text-shadow: none;
 }
 .onepage-pagination{
   z-index: 100 !important;

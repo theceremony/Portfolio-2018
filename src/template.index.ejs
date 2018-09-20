@@ -16,7 +16,10 @@
 				- Creative Director
 				- Installation Artist
 			</h2>
-			<canvas></canvas>
+			<div class="footer">
+				<div class="cutout"></div>
+				<div class="icon"></div>
+			</div>
     </section>
 
 		<% htmlWebpackPlugin.options.data.forEach(function(item) { %>
@@ -25,10 +28,10 @@
 				<div class="info">
 				 	<h2><%= item.clientName %>: <%= item.projectName %></h2>
 				 	<h3><%= item.projectSubHead %></h3>
-					<!-- <h4><%= item.content.header.title %></h4>
-					<p><%= item.content.header.copy %></p>
+					<!-- <h4><%= item.content.header.title %></h4> -->
+					<!-- <p><%= item.content.header.copy %></p> -->
 				</div>
-				<!-- <iframe
+				<iframe
 					src="https://player.vimeo.com/video/<%= item.vimeoId %>"
 					width="640"
 					height="360"
@@ -36,7 +39,7 @@
 					webkitallowfullscreen
 					mozallowfullscreen
 					allowfullscreen>
-				</iframe> -->
+				</iframe>
 			</section>
 		<% }); %>
   </div>

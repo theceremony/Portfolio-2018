@@ -17,7 +17,7 @@ $(function(){
      easing: "ease-in-out",
      animationTime: 400,
      pagination: true,
-     updateURL: true,
+     updateURL: false,
      beforeMove: function(index) {
        // console.log('about to move');
      },

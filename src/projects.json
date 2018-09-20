@@ -24,6 +24,60 @@
 		}
 	},
 	{
+		"clientName": "Google Creative Labs",
+		"projectName": "Anypixel",
+		"projectId": "google-anypixel",
+		"projectSubHead": "An open-source software and hardware library that makes it possible to use the web to create big, unusual, interactive displays.",
+		"projectUrl": "",
+		"mediaFolder": "google",
+		"vimeoId":"181648674",
+		"videoUrl": "https://player.vimeo.com/video/181648674?title=0&byline=0&portrait=0",
+		"fwaSotd": false,
+		"type": "website",
+		"content": {
+			"header": {
+				"title": "Anypixel can be Interactive",
+				"copy": "AnyPixel.js is an open-source software and hardware library that makes it possible to use the web to create big, unusual, interactive displays out of all kinds of things. Anyone can fork the code and the schematics to create their own display at any scale."
+			},
+			"awards": []
+		}
+	},{
+		"clientName": "Clif",
+		"projectName": "Mantra Maker",
+		"projectId": "clif-mantra-maker",
+		"projectSubHead": "Run Your Mantra",
+		"projectUrl": "",
+		"mediaFolder": "clif",
+		"vimeoId":"262858504",
+		"videoUrl": "https://player.vimeo.com/video/262858504?title=0&byline=0&portrait=0",
+		"fwaSotd": false,
+		"type": "website",
+		"content": {
+			"header": {
+				"title": "Mantra Maker Experience",
+				"copy": "Mantra Maker is an interactive installation, a website and mobile experience in one. The application was built in WebGL, so not only does the installation run in a browser, you can experience the whole 3D run experience in real time on the phone. Mantra Maker was installed at both the Boston and LA marathon for runners to explore their mantra."
+			},
+			"awards": []
+		}
+	},{
+		"clientName": "Intel",
+		"projectName": "Avataraoke",
+		"projectId": "Intel-Avataraoke",
+		"projectSubHead": "Real time karaoke avatars.",
+		"projectUrl": "",
+		"mediaFolder": "intel",
+		"vimeoId":"108518668",
+		"videoUrl": "https://player.vimeo.com/video/108518668?title=0&byline=0&portrait=0",
+		"type": "installation",
+		"content": {
+			"header": {
+				"title": "Sing Your Head Off",
+				"copy": "To introduce the Intel Pocket Avatars to the world, we created an epic karaoke, showcasing the avatars themselves, educating the guests on the app’s functionality while entertaining them at the same time."
+			},
+			"awards": []
+		}
+	},
+	{
 		"clientName": "Sony",
 		"projectName": "Separate Together",
 		"projectId": "Sony-Seperate-Together",
@@ -144,8 +198,8 @@
 		"projectSubHead": "The only app you'll ever need to survive the zombie apocalypse.",
 		"projectUrl": "http://walkingdeadchopshop.com/",
 		"mediaFolder": "twd",
-		"vimeoId":"71542590",
-		"videoUrl": "https://player.vimeo.com/video/71542590?title=0&byline=0&portrait=0",
+		"vimeoId":"130896575",
+		"videoUrl": "https://player.vimeo.com/video/130896575?title=0&byline=0&portrait=0",
 		"type": "app",
 		"content": {
 			"header": {
@@ -176,24 +230,6 @@
 			"header": {
 				"title": "Lexus Design Disrupted at New York Fashion Week 2013",
 				"copy": "For NYFW 2013, I turned the 2014 Lexus IS into an interactive holographic work of art.  My interactive installation allowed guests to engage with holograms projected inside the car with their mobile devices, creating entrancing animations and stunning graphics. The more people that connected, the more vibrant the holographic visuals became."
-			},
-			"awards": []
-		}
-	},
-	{
-		"clientName": "Intel",
-		"projectName": "Avataraoke",
-		"projectId": "Intel-Avataraoke",
-		"projectSubHead": "Real time karaoke avatars.",
-		"projectUrl": "",
-		"mediaFolder": "intel",
-		"vimeoId":"108518668",
-		"videoUrl": "https://player.vimeo.com/video/108518668?title=0&byline=0&portrait=0",
-		"type": "installation",
-		"content": {
-			"header": {
-				"title": "Lorem ipsum dolor sit amet",
-				"copy": "To introduce the Intel Pocket Avatars to the world, we created an epic karaoke, showcasing the avatars themselves, educating the guests on the app’s functionality while entertaining them at the same time."
 			},
 			"awards": []
 		}

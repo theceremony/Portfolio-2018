@@ -9,29 +9,45 @@
     font-size: 5.68vw;
   }
 
+  section.portfolio .info{
+    left: 2vw;
+    top:-40vw;
+    width: 80vw;
+    transform: rotate(1deg) scale(1);
+  }
+
   section.portfolio.show .info{
     left: 2vw;
     top:18vw;
     width: 80vw;
     transform: rotate(1deg) scale(1);
-    transition: all  .6s cubic-bezier(0.465, 0.860, 0.605, 1.180);
+    transition: all  .3s cubic-bezier(0.465, 0.860, 0.605, 1.180);
     transition-delay: .2s;
   }
 
-  section.portfolio.show .description{
-    width: 80vw;
-    right: 4vw;
-    font-size: 60%;
-    bottom: 30vw;
-    right: 12vw;
-    transform: rotate(2deg);
+  section.portfolio .description{
     display:none;
   }
 
   section.portfolio.show::after{
     width: 80vw;
     right: 4vw;
-    top:50%
+    top:56%
+  }
+
+  section.portfolio::after{
+    width: 80vw;
+    right: 4vw;
+    top:56%
+  }
+
+  section.portfolio iframe{
+    top: 55%;
+    left:50%;
+    width: 88vw;
+    height: 50vw;
+    transform: translate(-50%,-50%) rotate(6deg) scale(0);
+
   }
 
   section.portfolio.show iframe{
@@ -39,7 +55,7 @@
     left:50%;
     width: 88vw;
     height: 50vw;
-    transform: translate(-50%,-50%) rotate(-6deg);
+    transform: translate(-50%,-50%) rotate(-6deg) scale(1);
 
   }
 

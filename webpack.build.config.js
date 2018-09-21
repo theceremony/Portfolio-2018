@@ -1,18 +1,16 @@
 
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LiveReloadPlugin =  require('webpack-livereload-plugin');
 const json = require('./src/projects.json');
-const NgrockWebpackPlugin = require('ngrock-webpack-plugin')
 module.exports =  {
-   mode: 'development',
+   mode: 'production',
   entry: './src/js/app.js',
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js'
   },
   devServer: {
-      
+
     },
   module: {
     rules: [
@@ -55,11 +53,6 @@ module.exports =  {
       filename: 'index.html',
       template: './src/template.index.ejs',
       data: json,
-    }),
-    new LiveReloadPlugin({
-      protocol:'http',
-      appendScriptTag: true
-    }),
-    new NgrockWebpackPlugin()
+    })
   ]
  }

@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   -webkit-overflow-scrolling: touch;
@@ -17,10 +18,7 @@ section{
   overflow: hidden;
   box-sizing: border-box;
   background-size: cover;
-  background-blend-mode: exclusion;
-  /* transition: background-color .2s; */
   background-color: #f08860;
-  /* border: 2.5vw solid white; */
 }
 
 section.portfolio iframe{
@@ -230,13 +228,3 @@ section.portfolio .info p{
   position: relative;
   text-shadow: none;
 }
-/* .onepage-pagination{
-  z-index: 100 !important;
-}
-.onepage-pagination li a:before{
-  background: #fff !important;
-}
-
-.onepage-pagination li a.active:before{
-  border: 1px solid white !important;
-} */

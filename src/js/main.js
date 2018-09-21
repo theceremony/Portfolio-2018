@@ -44,4 +44,11 @@ $(function(){
   $('iframe').mouseout(function(e){
     $(e.currentTarget).removeClass('hover');
   })
+
+  // Prevents window from moving on touch on newer browsers.
+  window.addEventListener('touchmove', function (event) {
+    event.preventDefault()
+  }, {passive: false})
+
+
 });

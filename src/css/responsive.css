@@ -1,13 +1,81 @@
-/* Responsive: */
 
-@media only screen and (min-width: 640px) {
-  .layout {
-    display: flex;
+
+/* for-phone-only */
+@media (max-width: 599px) {
+  .about h1{
+    font-size: 25vw;
+  }
+  .about h2{
+    font-size: 5.68vw;
+  }
+
+  section.portfolio.show .info{
+    left: 2vw;
+    top:18vw;
+    width: 80vw;
+    transform: rotate(1deg) scale(1);
+    transition: all  .6s cubic-bezier(0.465, 0.860, 0.605, 1.180);
+    transition-delay: .2s;
+  }
+
+  section.portfolio.show .description{
+    width: 80vw;
+    right: 4vw;
+    font-size: 60%;
+    bottom: 30vw;
+    right: 12vw;
+    transform: rotate(2deg);
+  }
+
+  section.portfolio.show::after{
+    width: 80vw;
+    right: 4vw;
+    top:50%
+  }
+
+  section.portfolio.show iframe{
+    top: 50%;
+    left:50%;
+    width: 88vw;
+    height: 50vw;
+    transform: translate(-50%,-50%) rotate(-6deg);
+
+  }
+
+  section.portfolio .info h2{
+    font-size: 6.8vw;
+    /* font-weight: 800; */
+    line-height: 100%;
+    margin-bottom: 1vw;
+    /* font-family: 'Anton', sans-serif; */
+    text-transform: uppercase;
   }
 }
 
-@media only screen and (min-width: 500px) {
-  h1 {
-    font-size: 3.5em;
+/* for-tablet-portrait-up  */
+@media (min-width: 600px) {
+  .about h1{
+    font-size: 25vw;
   }
+  .about h2{
+    font-size: 3.68vw;
+  }
+}
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {
+  .about h1{
+    font-size: 16vw;
+  }
+  .about h2{
+    font-size: 1.68vw;
+  }
+}
+/* for-desktop-up */
+@media (min-width: 1200px) {
+
+}
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {
+
 }

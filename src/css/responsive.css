@@ -25,6 +25,7 @@
     bottom: 30vw;
     right: 12vw;
     transform: rotate(2deg);
+    display:none;
   }
 
   section.portfolio.show::after{
@@ -34,7 +35,7 @@
   }
 
   section.portfolio.show iframe{
-    top: 50%;
+    top: 55%;
     left:50%;
     width: 88vw;
     height: 50vw;
@@ -64,10 +65,10 @@
 /* for-tablet-landscape-up */
 @media (min-width: 900px) {
   .about h1{
-    font-size: 16vw;
+    font-size: 20vw;
   }
   .about h2{
-    font-size: 1.68vw;
+    font-size: 2.5vw;
   }
 }
 /* for-desktop-up */

@@ -1,7 +1,5 @@
 body {
-  margin: 1.5em;
   font-family: 'Quicksand', sans-serif;
-  /* background-color: #000; */
   color: #fff;
   -webkit-overflow-scrolling: touch;
 }
@@ -207,7 +205,7 @@ section.portfolio .info p{
 
 
 .about h1{
-  font-size: 16vw;
+  font-size: 18vw;
   text-transform: uppercase;
   font-weight: 400;
   text-align: left;
@@ -232,7 +230,7 @@ section.portfolio .info p{
   position: relative;
   text-shadow: none;
 }
-.onepage-pagination{
+/* .onepage-pagination{
   z-index: 100 !important;
 }
 .onepage-pagination li a:before{
@@ -241,4 +239,4 @@ section.portfolio .info p{
 
 .onepage-pagination li a.active:before{
   border: 1px solid white !important;
-}
+} */

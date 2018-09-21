@@ -1,54 +1,59 @@
-$(function(){
 
+const onePageScroll = require('./onepagescroll.js');
+
+document.addEventListener("DOMContentLoaded", function() {
+  // color choice -->
+  let landingBKGS = ['#f08860','#c1c627','#c627c6','#c6274c','#27c6be'];
+  let color = landingBKGS[Math.floor(Math.random() * landingBKGS.length)]
+  // ---------------------------------------
   let timer = null;
+  let sections = document.getElementsByTagName('section');
+  let iframes = document.getElementsByTagName('iframe');
+  // ---------------------------------------
+  for (var i in sections) {
+    if(sections[i].style) sections[i].style.backgroundColor = color;
+  }
+  document.getElementsByClassName('cutout')[0].style.borderTopColor = color;
+  // ---------------------------------------
+  for (var i in iframes) {
+    if(iframes[i].addEventListener){
+      iframes[i].addEventListener("mouseover", function(e){
+        e.target.classList.add('hover');
+      });
+      iframes[i].addEventListener("mouseout", function(e){
+        e.target.classList.remove('hover');
+      });
+    }
+  }
+  // ---------------------------------------
   function show(index){
-
     if(timer) clearTimeout(timer);
-
     timer = setTimeout(function(){
-      $('section').removeClass('show');
-      let section = $($('section')[index])
-        section.addClass('show');
+      for (var i in sections) {
+        if(sections[i].classList)sections[i].classList.remove('show');
+      }
+      sections[index].classList.add('show');
     },200)
   }
 
-  $(".main").onepage_scroll({
+  show(0);
+  // ---------------------------------------
+  onePageScroll(".main", {
      sectionContainer: "section",
      easing: "ease-in-out",
      animationTime: 400,
      pagination: true,
      updateURL: false,
-     beforeMove: function(index) {
-       // console.log('about to move');
-     },
-     afterMove: function(index) {
-       show(index-1);
-     },
+     afterMove: function(index) { show(index-1);},
      loop: false,
      keyboard: true,
      responsiveFallback: false,
      direction: "vertical"
   });
-
-  show(0);
-  let landingBKGS = ['#f08860','#c1c627','#c627c6','#c6274c','#27c6be'];
-  let color = landingBKGS[Math.floor(Math.random() * landingBKGS.length)]
-
-  $('section').css('background-color',color);
-  $('.cutout').css('border-top-color',color);
-
-  $('iframe').mouseover(function(e){
-    $(e.currentTarget).addClass('hover');
-  })
-
-  $('iframe').mouseout(function(e){
-    $(e.currentTarget).removeClass('hover');
-  })
-
+  // ---------------------------------------
   // Prevents window from moving on touch on newer browsers.
   window.addEventListener('touchmove', function (event) {
     event.preventDefault()
   }, {passive: false})
-
-
+  // ---------------------------------------
 });

@@ -5,6 +5,7 @@ const LiveReloadPlugin =  require('webpack-livereload-plugin');
 const json = require('./src/projects.json');
 
 module.exports =  {
+   mode: 'development',
   entry: './src/js/app.js',
   output: {
     path: __dirname + '/dist',
